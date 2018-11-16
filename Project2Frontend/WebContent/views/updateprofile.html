@@ -1,0 +1,27 @@
+<head>
+ <link rel="stylesheet" href="resources/template/css/reg.css">
+ </head>
+ <body>
+
+<div class="reg">
+  <div class="reg-triangle"></div>
+  
+  <h2 class="reg-header">Update Profile</h2>
+
+  <form class="reg-container">
+  	<p><input type="firstname" ng-model="user.firstname" placeholder="Firstname"></p>
+  	<p><input type="lastname" ng-model="user.lastname" placeholder="Lastname"></p>
+    <p><input type="email" ng-model="user.email" placeholder="Email"></p>
+    <p><input type="text" ng-model="user.phonenumber" placeholder="PhoneNumber"></p>
+    <p><input type="password" ng-model="user.password" placeholder="Password"></p>
+    <p><input type="password" placeholder="Confirm Password"></p>
+				<select class="form-control" ng-model="user.role" data-field="phone" placeholder="Role">
+												<option value="STUDENT">Student</option>
+												<option value="EMPLOYEE">Employee</option>
+												<option value="ALUMINI">Alumini</option>
+											</select>
+											<span style="color:red">{{error.errorMsg}}</span>
+    <p><input type="submit" ng-click="updateProfile(user)" value="Update"></p>
+  </form>
+  </body>
+</div>
